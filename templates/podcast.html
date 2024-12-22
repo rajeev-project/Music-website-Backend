@@ -1,0 +1,189 @@
+{%extends 'base3.html'%}
+{%load static%}
+{%block podcast%}
+<div class="body">
+    <div class="half">
+     <div class="scroll">
+         <div class="scroll2">
+             <img src="{% static 'image/Black and Red Simple Modern Minimalist True Crime Podcast YouTube Banner.png'%}">
+             <div class="writing">
+             </div>
+         </div>
+         <div class="scroll2">
+             <img src="{% static 'image/Brown Simple Elegant Podcast Banner.png' %}">
+             <div class="writing">
+                 
+             </div>
+         </div>
+         <div class="scroll2">
+             <img src="{% static 'image/_Electric Neon Podcast Youtube Banner.png'%}">
+             <div class="writing">
+                 
+             </div>
+         </div>
+         <div class="scroll2">
+             <img src="{% static 'image/Purple and Silver Modern Future Woman Podcast LinkedIn Banner.png'%}">
+             <div class="writing">
+                 
+             </div>
+         </div>
+         <div class="scroll2">
+             <img src="./images/zayn.jpg">
+             <div class="writing">
+             </div>
+         </div>
+         <div class="scroll2">
+             <img src="./images/weekend.jpg">
+             <div class="writing">
+                 
+             </div>
+         </div>
+         <div class="scroll2">
+             <img src="./images/kygo.jpg">
+             <div class="writing">
+                 
+             </div>
+         </div>
+         <div class="scroll2">
+             <img src="./images/dua.jpg">
+             <div class="writing">
+                 
+             </div>
+         </div>
+
+     </div>
+    </div>
+    <div class="title">
+     <div class="songtitle"><h2>{{psec1.title}}</h2></div>
+     <div class="songbar">
+        {%for i in pod1%}
+         <div class="card">
+         <div class="songimg"  data-title="Memories" 
+         data-artist="Maroon5" 
+         data-img="/web_app/{{i.pod_img}}" 
+         data-audio="./music/maroon5.mp3">
+             <img src="/web_app/{{i.pod_img}}">
+             <button class="button"><img class="img" src="{% static 'image/play-141.svg'%}"></button>
+            
+         </div>
+         <a href="{%url 'page'%}"><h3>{{i.song_name}}</h3></a>
+         <p>{{i.artist_name}}</p>
+     </div>
+     {%endfor%}
+
+     </div>
+     
+    </div>
+   
+ </div>
+ <div class="player"> 
+     <div class="playerimg">
+         <img class="player-img" src=" ">
+         <div class="playwrite">
+             <h3 class="player-title" ></h3>
+             <h4 class="player-artist"></h4>
+         </div>
+     </div>
+     <div class="playerbar" id="payerid">
+         <audio class="audio-player" controls>
+             <source src=" " type="audio/mp3">
+         </audio>
+     </div>
+ </div>
+ <div class="main2">
+     <div class="category"><h2>Popular category</h2></div>
+     <div class="artistblock">
+     <div class="artistbox">
+         <div class="artist"><p>Inspiring</p></div>
+         <div class="artist"><p>Cinematic</p></div>
+ </div>
+ <div class="artistbox">
+     <div class="artist"><p>Love</p></div>
+     <div class="artist"><p>Happy</p></div>
+ </div>  
+ <div class="artistbox">
+      <div class="artist"><p>Fun</div>
+      <div class="artist"><p>Upbeat</p></div>
+      </div>
+      <div class="artistbox">
+           <div class="artist"><p>Hip-Hop</p></div>
+           <div class="artist"><p>Rock</p></div>
+           </div>
+           <div class="artistbox">
+                <div class="artist"><p>Pop</p></div>
+                <div class="artist"><p>Electronic</p></div>
+                </div>
+                <div class="artistbox">
+                <div class="artist"><p>Chill</p></div>
+                <div class="artist"><p>Calm</p></div>
+                </div>
+     </div>
+ </div>
+ <div class="title">
+     <div class="songtitle"><h2>{{psec2.title}}</h2></div>
+     <div class="songbar">
+        {%for i in pod2%}
+         <div class="card">
+         <div class="songimg"  data-title="Memories" 
+         data-artist="Maroon5" 
+         data-img="/web_app/{{i.pod_img}}" 
+         data-audio="./music/maroon5.mp3">
+             <img src="/web_app/{{i.pod_img}}">
+             <button class="button"><img class="img" src="{% static 'image/play-141.svg'%}"></button>
+            
+         </div>
+         <h3>{{i.song_name}}</h3>
+         <p>{{i.artist_name}}</p>
+     </div>
+     {%endfor%}
+     
+     </div>
+     
+    </div>
+
+ <div class="title">
+     <div class="songtitle"><h2>{{psec3.title}}</h2></div>
+     <div class="songbar">
+        {%for i in pod3%}
+         <div class="card">
+         <div class="songimg"  data-title="Memories" 
+         data-artist="Maroon5" 
+         data-img="/web_app/{{i.pod_img}}" 
+         data-audio="./music/maroon5.mp3">
+             <img src="/web_app/{{i.pod_img}}">
+             <button class="button"><img class="img" src="{% static 'image/play-141.svg'%}"></button>
+            
+         </div>
+         <h3>{{i.song_name}}</h3>
+         <p>{{i.artist_name}}</p>
+     </div>
+        {%endfor%}
+     
+    </div>
+   
+ </div>
+
+ <div class="mediaheader">
+     <div class="join">
+         <div class="medialogo">
+             <img src="{% static 'image/Fellow.svg'%}"> 
+         </div>
+         <div class="mediahome">
+             <button class="medbutton" onclick="toggleDropdown()">
+                 <h3>Menu</h3>
+                 <span class="material-symbols-outlined">
+                 arrow_drop_down_circle
+                 </span>
+             </button>
+             <div class="dropdown" id="dropdownMenu">
+                 <ul>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Playlist</a></li>
+                     <li><a href="#">Podcast</a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Contact</a></li>
+                 </ul>
+             </div>
+         </div>
+     </div> 
+{%endblock%}

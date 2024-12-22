@@ -1,0 +1,7 @@
+<h1>Sections</h1>
+<ul>
+    {% for section in sections %}
+        <li>{{ section.title }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_section' %}">Add New Section</a>

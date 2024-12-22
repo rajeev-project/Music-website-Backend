@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.header{
+    width:100%;
+    height:150px;
+    background:white;
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:fixed;
+    z-index: 2;
+    
+}
+.logo img{
+    width:200px;
+    height:120px;
+}
+.profile img{
+    width:35px;
+    height:35px;
+    
+}
+.home ul{
+    display:flex;
+    width:45%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    list-style-type: none;
+}
+.home ul li a{
+    color:black;
+    text-decoration: none;
+    font-size:20px;
+    font-weight:bold ;
+}
+.logo{
+    width:20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search{
+    width:45%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.search input{
+    width:90%;
+    height:40px;
+    padding-left: 10px;
+    border-radius: 5px;
+   
+}
+.home{
+    width:35%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+   
+    
+}
+.profile{
+    width:10%;
+    height: 100%;
+    display: flex ;
+    justify-content:start;
+    align-items: center;
+    
+
+}
+.sub-box{
+   position: absolute; 
+   top:20%;
+   right: 70px;;
+   width:320px;
+   max-height: 0px;
+   overflow: hidden;
+   transition:max-height 0.5s;
+}
+.sub-box.open-menu{
+    max-height: 400px;
+}
+.sub-menu{
+    background-color: antiquewhite;
+    padding:20px;
+    margin:10px;
+    
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    font-weight: 600 ;
+    gap:10px;
+}
+.sub-menu hr{
+    height:1px;
+    width:100%;
+    border:0;
+    background-color: black;
+    margin-top: 15px;
+    margin-bottom:10px;
+
+}
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+    margin:12px;
+}
+.sub-menu-link p{
+    width:100%;
+
+}
+.sub-menu-link img{
+    width:40px;
+    border-radius:50%;
+    padding:8px;
+
+}
+.sub-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+
+}
+.sub-menu-link:hover span{
+    width:100%;
+    transform: translateX(5px) ;
+
+}
+.sub-menu-link:hover p{
+    width:100%;
+    font-weight: 600;
+
+}
+.blank{
+    width:100%;
+    height:150px;
+    background-color: white;
+}
+.mediaheader{
+    width:100%;
+    height:150px;
+    background-color: white;
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top:0;
+    z-index: 2;
+    display: none;
+    
+}
+.join{
+    width:350px;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.medialogo{
+    width:70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mediahome {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    width: 150px;
+}
+
+.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+.medbutton{
+    display: flex;
+    border-radius:15px;
+    width:90%;
+    height:50px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border-color: transparent;
+    background-color: rgba(0, 0, 0, 0.3);
+    gap:5px;
+}
+@media (max-width: 1170px) {
+    .header{
+        display: none;
+    }
+    .mediaheader{
+        display: flex;
+    }
+    .heart-wrapper{
+        display:none;
+    }
+
+}
+.home ul li a:hover{
+    color:orange
+}

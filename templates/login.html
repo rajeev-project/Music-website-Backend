@@ -1,0 +1,43 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/form.css'%}">
+</head>
+<body>
+    <div class="main">
+        <div class="page">
+            <div class="leftside">
+            <div class="left">
+                <h1>Fellow</h1>
+                <h2>Where Melodies Unite <br> and Rhythms Inspire!</h2>
+            </div>
+            </div>
+            <div class="rightside">
+                <form method="post">
+                    {%csrf_token%}
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="password" placeholder="Password" name="password">
+                    <input type="submit" class="one" value="Login">
+                    <p>forgot password?</p>
+                    <hr>
+                    <input type="button" class="two" value="Create new account" onclick="window.location.href='{% url 'register' %}';">
+  
+                </form>
+                
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+.body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.content {
+    width: 90%;
+    height: 100%;
+    display:flex;
+}
+.left {
+    width: 30%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.left1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.heading {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.org {
+    color: orange;
+}
+.heading:hover h3 {
+    color: orange;
+}
+hr {
+    width: 100%;
+    color: black;
+    margin-top: 30px;;
+}
+.left2 {
+    width: 100%;
+    height: 200px;
+}
+.heading2 {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Moods {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap:20px;
+    
+}
+.heading3 {
+    height:30px;
+    border:2px solid black;
+    border-radius:15px;;
+    display:flex;
+    padding: 8px;
+    align-items: center;
+    background-color: rgba(193, 181, 181, 0.2);
+    justify-content: center;
+
+}
+.heading3:hover {
+      border:2px solid orange;
+}
+.right{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+}
+.song_artist{
+    width:100%;
+    height:100%;
+    padding-top: 40px;
+    overflow-y: scroll;
+}
+.song_artist::-webkit-scrollbar{
+    display:none;
+}
+@media (max-width:1000px){
+    .left{
+        display:none;
+    }
+}
+

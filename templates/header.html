@@ -1,0 +1,70 @@
+{%load static%}
+<div class="header">
+    <div class="logo"><img src="{%static 'image/Fellow.svg'%}"></div>
+    <div class="search"><input type="search" placeholder="Search Music,Podcast and More.."> </div>
+    <div class="home">
+       <ul class="no-bullet">
+        <li><a href="{% url 'home'%}">Home</a></li>
+        <li><a href="{% url 'playlist'%}" position=relative>Playlist</a></li>
+        <li><a href="{% url 'podcast'%}" >podcast</a></li>
+        <li><a href="#">about</a></li>
+        <div class="count-wrapper">
+            <span class="count-display">0</span>
+          </div>
+        <li> <div class="profile"><img src="{% static 'image/profile-circle.svg'%}" onclick="ToggleMenu()"></div></li>
+       </ul>
+    </div>
+       <div class="sub-box" id="submenu">
+        <div class="sub-menu">
+            <div class="user-info">
+            <img src="{% static 'image/profile-circle.svg'%}" width="40px" height="40px">
+            <h3>{{request.user}}</h3>
+            </div>
+            <hr>
+            <a href="#" class="sub-menu-link">
+                <img src="{% static 'image/profile-circle.svg'%}">
+                <p>Edit Profile</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="{% static 'image/settings.png'%}">
+                <p>Settings and privacy</p>
+                <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="{%static 'image/question-mark.png'%}">
+                <p>Help & support</p>
+                <span>></span>
+            </a>
+        {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+                <a href="{% url 'logout' %}" class="sub-menu-link">
+                    <img src="{% static 'image/logout-8.png' %}">
+                    <p>Log out</p>
+                    <span>></span>
+                </a>
+                <a href="{% url 'admin' %}" class="sub-menu-link">
+                    <img src="{% static 'image/logout-8.png' %}">
+                    <p>Admin-panel</p>
+                    <span>></span>
+                </a>
+            {% else %}
+                <a href="{% url 'logout' %}" class="sub-menu-link">
+                    <img src="{% static 'image/logout-8.png' %}">
+                    <p>Log out</p>
+                    <span>></span>
+                </a>
+            {% endif %}
+        {% else %}
+            <a href="{% url 'login' %}" class="sub-menu-link">
+                <img src="{% static 'image/logout-8.png' %}">
+                <p>Log in</p>
+                <span>></span>
+            </a>
+        {% endif %}
+        </div>
+       </div> 
+</div>
+<div class="blank">
+    
+</div>

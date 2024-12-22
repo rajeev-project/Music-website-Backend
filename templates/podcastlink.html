@@ -1,0 +1,176 @@
+{%extends "base4.html"%}
+{%load static%}
+{%block page%}
+<div class="body">
+    <div class="podcastimg">
+        <div class="podcast_img">
+            <img src="{% static 'image/joe.jpg'%}">
+        </div>
+        <div class="pod_heading">
+            <div class="pod">
+            <h4>podcast</h4>
+            <h1>THE JOE ROGAN EXPERIANCE</h1>
+            <h3>Joe Rogan</h3>
+        </div>
+        </div>
+    </div>
+    <div class="play">
+     <div class="playbutton">
+        <button><h2>follow</h2></button>              -
+    </div>
+    </div>
+    <div class="parts">
+    <div class="part1">
+        <div class="sepration">
+        <div class="top">
+            <div class="all-episodes"><h3>All Episodes</h3></div>
+        </div>      
+        <hr>
+        <div class="episode">
+          <div class="episode-img">
+            <img src="{%static 'image/joe2.jpeg'%}">
+          </div>
+          <div class="description">
+            <div class="description2">
+                <h2>{{pplay1.ep_name}}</h2>
+                <p>video.Joe Rogan Experiance</p>
+                <p>{{pplay1.des}}</p>
+                <h3>nov 6 . 3h 20m</h3>
+            </div>
+            <div class="play2">
+                <div class="left1">
+                    <img src="{% static 'image/plus.svg'%}">
+                </div>
+                <div class="right1">
+                    <img src="{%static 'image/play-button.svg'%}">
+                </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="episode">
+            <div class="episode-img">
+              <img src="{%static 'image/joe2.jpeg'%}">
+            </div>
+            <div class="description">
+              <div class="description2">
+                  <h2>{{pplay2.ep_name}}</h2>
+                  <p>video.Joe Rogan Experiance</p>
+                  <p>{{pplay2.des}}</p>
+                  <h3>nov 6 . 3h 20m</h3>
+              </div>
+              <div class="play2">
+                  <div class="left1">
+                      <img src="{% static 'image/plus.svg'%}">
+                  </div>
+                  <div class="right1">
+                      <img src="{%static 'image/play-button.svg'%}">
+                  </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="episode">
+            <div class="episode-img">
+              <img src="{%static 'image/joe2.jpeg'%}">
+            </div>
+            <div class="description">
+              <div class="description2">
+                  <h2>#2445 Donald Trump</h2>
+                  <p>video.Joe Rogan Experiance</p>
+                  <p>Donald Trump is currently the 2024 Presidential Candidate of the Republican Party. He previously served as America’s 45th president, and is also a businessman and media personality.</p>
+                  <h3>nov 6 . 3h 20m</h3>
+              </div>
+              <div class="play2">
+                  <div class="left1">
+                      <img src="{% static 'image/plus.svg'%}">
+                  </div>
+                  <div class="right1">
+                      <img src="{%static 'image/play-button.svg'%}">
+                  </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="episode">
+            <div class="episode-img">
+              <img src="{%static 'image/joe2.jpeg'%}">
+            </div>
+            <div class="description">
+              <div class="description2">
+                  <h2>#2445 Donald Trump</h2>
+                  <p>video.Joe Rogan Experiance</p>
+                  <p>Donald Trump is currently the 2024 Presidential Candidate of the Republican Party. He previously served as America’s 45th president, and is also a businessman and media personality.</p>
+                  <h3>nov 6 . 3h 20m</h3>
+              </div>
+              <div class="play2">
+                  <div class="left1">
+                      <img src="{% static 'image/plus.svg'%}">
+                  </div>
+                  <div class="right1">
+                      <img src="{%static 'image/play-button.svg'%}">
+                  </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="episode">
+            <div class="episode-img">
+              <img src="{%static 'image/joe2.jpeg'%}">
+            </div>
+            <div class="description">
+              <div class="description2">
+                  <h2>#2445 Donald Trump</h2>
+                  <p>video.Joe Rogan Experiance</p>
+                  <p>Donald Trump is currently the 2024 Presidential Candidate of the Republican Party. He previously served as America’s 45th president, and is also a businessman and media personality.</p>
+                  <h3>nov 6 . 3h 20m</h3>
+              </div>
+              <div class="play2">
+                  <div class="left1">
+                      <img src="{% static 'image/plus.svg'%}">
+                  </div>
+                  <div class="right1">
+                      <img src="{%static 'image/play-button.svg'%}">
+                  </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+    </div>
+    </div>
+    <div class="part2">
+        <h1>About</h1>
+        <p>The official podcast of comedian joe rogan</p>
+        <div class="rating">
+            <div class="one">4.7/5 (887.3k)</div>
+            <h1>.</h1>
+            <div class="one">comedy</div>
+            <div class="one">culture</div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="mediaheader">
+    <div class="join">
+        <div class="medialogo">
+            <img src="{% static 'image/Fellow.svg'%}"> 
+        </div>
+        <div class="mediahome">
+            <button class="medbutton" onclick="toggleDropdown()">
+                <h3>Menu</h3>
+                <span class="material-symbols-outlined">
+                arrow_drop_down_circle
+                </span>
+            </button>
+            <div class="dropdown" id="dropdownMenu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Playlist</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{%endblock%} 

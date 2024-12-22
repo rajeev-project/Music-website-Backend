@@ -1,0 +1,10 @@
+<h1>Songs</h1>
+<a href="{% url 'add_song' %}">Add New Song</a>
+<ul>
+    {% for song in songs %}
+        <li>
+            {{ song.song_name }} - {{ song.artist_name }}
+            <a href="{% url 'edit_song' song.pk %}">Edit</a>
+        </li>
+    {% endfor %}
+</ul>

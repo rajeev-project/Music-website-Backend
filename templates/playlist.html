@@ -1,0 +1,149 @@
+{%extends 'base2.html' %}
+{%load static%}
+{%block playlist%}
+<div class="body">
+    <div class="content">
+        <div class="left">
+            <div class="left1">
+                <div class="heading org"><h3>Browse</h3></div>
+                <div class="heading"><h3>Verified series</h3></div>
+                <div class="heading"><h3>Popular in your area</h3></div>
+                <div class="heading"><h3>what's new</h3></div>
+                <div class="heading"><h3>best of week</h3></div>
+                <div class="heading"><h3>Top 10 charts</h3></div>
+                <div class="heading"><h3>funk</h3></div>
+                <div class="heading"><h3>jam</h3></div>
+                <div class="heading"><h3>Root</h3></div>
+                <div class="heading"><h3>Top streamed</h3></div>
+                <div class="heading"><h3>Your Wraped</h3></div>
+                <div class="heading"><h3>western</h3></div>
+                <div class="heading"><h3>classic</h3></div>
+            </div>
+            <hr>
+            <div class="left2">
+                <div class="heading2 org"><h3>Moods</h3></div>
+                <div class="Moods">
+                    
+                <div class="heading3"><h3>happy</h3></div>
+                <div class="heading3"><h3>sad</h3></div>
+                <div class="heading3"><h3>calm</h3></div>
+                <div class="heading3"><h3>motivation</h3></div>
+                <div class="heading3"><h3>joy</h3></div>
+                <div class="heading3"><h3>workout</h3></div>
+                <div class="heading3"><h3>chill</h3></div>
+                <div class="heading3"><h3>feel good</h3></div>
+            </div>
+            </div>
+            
+            <hr>
+            <div class="left2">
+                <div class="heading2 org"><h3>Gener</h3></div>
+                <div class="Moods">                           
+                <div class="heading3"><h3>pop</h3></div>
+                <div class="heading3"><h3>indie</h3></div>
+                <div class="heading3"><h3>chill</h3></div>
+                <div class="heading3"><h3>trap</h3></div>
+                <div class="heading3"><h3>funk</h3></div>
+                <div class="heading3"><h3>electronic</h3></div>
+                <div class="heading3"><h3>rock</h3></div>
+                <div class="heading3"><h3>latin</h3></div>
+            </div>
+        </div>
+    </div>
+
+        
+        <div class="right">
+            <div class="song_artist">
+                <div class="title">
+                    <div class="songtitle"><h2>{{sec1.title}}</h2></div>
+                    <div class="songbar">
+                        {%for i in pl1%}
+                        <div class="songimg"  data-title="{{i.song_name}}" 
+                        data-artist="{{i.song_artist}}" 
+                        data-img="/web_app/{{i.play_img}}" 
+                        data-audio="./music/Black and White (ALT) - 1.mp3">
+                            <img src="/web_app/{{i.play_img}}">
+                            <button class="button"><img class="img" src="{% static 'image/play-141.svg'%}"></button>
+                            <a href="{%url 'playpage'%}"><h3>{{i.song_name}}</h3></a>
+                        </div>
+                        {%endfor%}                      
+                    </div>  
+                   </div>
+                   <div class="title">
+                    <div class="songtitle"><h2>{{sec2.title}}</h2></div>
+                    <div class="songbar">
+                        {%for i in pl2%}
+                        <div class="songimg"  data-title="{{i.song_name}}" 
+                        data-artist="{{i.artist_name}}" 
+                        data-img="/web_app/{{i.play_img}}" 
+                        data-audio="./music/Black and White (ALT) - 1.mp3">
+                            <img src="/web_app/{{i.play_img}}">
+                            <button class="button"><img class="img" src="{% static 'image/play-141.svg'%}"></button>
+                            <h3>{{i.song_name}}</h3>
+                        </div>
+                        {%endfor%}
+                    </div>
+                    
+                   </div>
+                   <div class="title">
+                    <div class="songtitle"><h2>{{sec3.title}}</h2></div>
+                    <div class="songbar">
+                        {%for i in pl3%}
+                        <div class="songimg"  data-title="{{i.song_name}}" 
+                        data-artist="{{i.song_artist}}" 
+                        data-img="/web_app/{{i.play_img}}" 
+                        data-audio="./music/Black and White (ALT) - 1.mp3">
+                            <img src="/web_app/{{i.play_img}}">
+                            <button class="button"><img class="img" src="{% static 'image/play-141.svg'%}"></button>
+                            <h3>{{i.song_name}}</h3>
+                        </div>
+                        {%endfor%}
+                    </div>
+                    
+                    
+                   </div>
+                   <div class="title">
+                    <div class="songtitle"><h2>{{sec4.title}}</h2></div>
+                    <div class="songbar">
+                        {%for i in pl4%}
+                        <div class="songimg"  data-title="{{i.song_name}}" 
+                        data-artist="{{i.song_artist}}" 
+                        data-img="/web_app/{{i.play_img}}" 
+                        data-audio="./music/Black and White (ALT) - 1.mp3">
+                            <img src="/web_app/{{i.play_img}}">
+                            <button class="button"><img class="img" src="{% static 'image/play-141.svg'%}"></button>
+                            <h3>{{i.song_name}}</h3>
+                        </div>
+                        {%endfor%}
+                    </div>
+                    
+                    
+                   </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mediaheader">
+    <div class="join">
+        <div class="medialogo">
+            <img src="./image/Fellow.svg"> 
+        </div>
+        <div class="mediahome">
+            <button class="medbutton" onclick="toggleDropdown()">
+                <h3>Menu</h3>
+                <span class="material-symbols-outlined">
+                arrow_drop_down_circle
+                </span>
+            </button>
+            <div class="dropdown" id="dropdownMenu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Playlist</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+{%endblock%}
